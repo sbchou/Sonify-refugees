@@ -1,4 +1,13 @@
 date,state,city_county,address,nkill,ninjured,operations
+14-Nov-17,California,Corning,17357 Stagecoach Rd,6,10,N/A
+12-Nov-17,Indiana,Gary,4601 Melton Rd,0,7,N/A
+12-Nov-17,Georgia,Atlanta,50 Lower Alabama St,2,2,N/A
+12-Nov-17,California,Fresno,S Calvin Ave,0,5,N/A
+11-Nov-17,Texas,Dallas,2532 Martin Luther King Jr Blvd,1,3,N/A
+11-Nov-17,Louisiana,New Orleans,Forstall Street and Burgundy Street,1,5,N/A
+11-Nov-17,North Carolina,Fayetteville,2835 Bragg Blvd,1,5,N/A
+10-Nov-17,Ohio,Dayton (Trotwood),193 Olive Rd,0,4,N/A
+9-Nov-17,Pennsylvania,Philadelphia,1800 block of Ringgold,0,4,N/A
 5-Nov-17,Texas,Sutherland Springs,216 4th St,27,20,N/A
 4-Nov-17,Texas,Austin,N Lamar Blvd and Masterson Pass,0,4,N/A
 4-Nov-17,Ohio,Youngstown,2810 Market St,0,4,N/A
@@ -44,9 +53,9 @@ date,state,city_county,address,nkill,ninjured,operations
 24-Sep-17,New Jersey,Mays Landing,6000 block of Hoover Dr,1,3,N/A
 24-Sep-17,Tennessee,Antioch,3890 Pin Hook Rd,1,8,N/A
 24-Sep-17,New York,Syracuse,1226 E Fayette St,0,4,N/A
-23-Sep-17,Connecticut,Hartford,1170 Albany Ave,2,2,N/A
 23-Sep-17,Illinois,Danville,Seminary St and Jackson St,0,5,N/A
 23-Sep-17,California,Bakersfield,818 Real Rd,1,4,N/A
+23-Sep-17,Connecticut,Hartford,1164 Albany Ave,2,2,N/A
 20-Sep-17,Indiana,Gary,4300 block of 23rd Ct,0,5,N/A
 17-Sep-17,Michigan,Detroit,5000 block of Stanton Street,1,3,N/A
 17-Sep-17,Virginia,Petersburg,300 Mistletoe St,1,4,N/A
