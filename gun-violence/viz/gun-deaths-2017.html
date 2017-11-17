@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>A year of mass shootings in America</title>
-    <meta name="description" content="Deaths caused by mass shootings using data from the Gun Violence Archive.">
+    <meta name="description" content="So far, 412 people have been killed and 6,607 injured in  mass shootings this year. The Las Vegas concert shooting on Oct. 1 is the deadliest mass shooting in US history: 62 people killed and more than 400 injured.">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,15 +71,15 @@ body {
         <!-- INPUT: title -->
         <div class="headline">Deaths by mass shootings in 2017</div>
         <!-- INPUT: description for the chart -->
-        <div id="text">So far, 412 people have been killed and 6,607 injured in a mass shooting this year. 2017 includes the deadliest day in US history for gun violence — when a total of 62 people were killed on Oct. 1.</div> 
+        <div id="text">So far, 412 people have been killed and 6,607 injured in  mass shootings this year. The Las Vegas concert shooting on Oct. 1 is the deadliest mass shooting in US history: 62 people killed and more than 400 injured.</div> 
     </div>  
     <div id="container"></div>
     <div class="note">
         <!-- INPUT: data source -->
         Source:  
-        <a href='http://www.gunviolencearchive.org/' target='_blank'>Gun Violence Archive</a>
+        <a href='http://www.gunviolencearchive.org/' target='_blank'>Gun Violence Archive</a>. Data is current as of Nov. 17, 2017.
         <!-- INPUT: additional notes for the chart -->
-        <br>The Gun Violence Archive defines a mass shooting as an event where four or more are shot and/or killed in a single incident, at the same general time and location  not including the shooter.
+        <br>The Gun Violence Archive defines a mass shooting as an event where four or more are shot and/or killed in a single incident which occurs at the same general time and location. Counts do not include the shooter.
         <!-- INPUT: credit -->
         <div id="credit">Sophie Chou / PRI</div>
     </div>
@@ -346,7 +346,7 @@ $(function () {
                     [Date.UTC(2017,09,31),1],
                     [Date.UTC(2017,10,03),1],
                     [Date.UTC(2017,10,04),1],
-                    {x: Date.UTC(2017,10,05), y:27, text:"Sutherland Springs",dataLabels: {enabled:true}},
+                    {x: Date.UTC(2017,10,05), y:27, text:"Sutherland<br>Springs",dataLabels: {enabled:true}},
                     [Date.UTC(2017,10,09),0],
                     [Date.UTC(2017,10,10),0],
                     [Date.UTC(2017,10,11),3],
