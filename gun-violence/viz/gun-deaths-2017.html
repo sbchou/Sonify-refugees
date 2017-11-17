@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The death toll of five years of mass shootings in America</title>
+    <meta name="description" content="Deaths caused by mass shootings using data from the Gun Violence Archive.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+  </head>
+
+<style>
+body {
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,"Nimbus Sans L",sans-serif;
+  font-size: 112.5%;
+  line-height: 1.5em;
+  color: #33333c;
+      }  
+
+#wrapper {
+    border:1px solid #D3D3D3;
+    max-width: 600px; /*INPUT: set the width of the chart*/
+    margin: 0 auto;
+}
+
+#container{
+    height: 300px; /*INPUT: set the height of the chart*/
+    max-width: 100%;
+}
+
+.head {padding:0px 10px;}
+
+.note {
+    font-size: 12px;
+    color: #808080;
+    line-height: 14px;
+    padding:0px 10px 10px 10px;
+}
+
+#credit {
+    font-size: 10px;
+    padding-top: 5px;
+    text-align: right;
+}
+
+.headline {
+    font-size: 18px;
+    font-weight: normal;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    line-height: 24px;
+}
+
+#text {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+@media (max-width: 400px ) { 
+    .headline {font-size: 16px; line-height: 20px; padding-bottom: 5px;}
+    #text {font-size: 12px;line-height: 14px;}
+} 
+
+</style>
+
+<body>
+<div id="wrapper">  
+    <div class="head">
+        <!-- INPUT: title -->
+        <div class="headline">The death toll of mass shootings in America</div>
+        <!-- INPUT: description for the chart -->
+        <div id="text">In 5 years, 1,792 people were killed and 6,607 injured by mass shootings in the US.</div> 
+    </div>  
+    <div id="container"></div>
+    <div class="note">
+        <!-- INPUT: data source -->
+        Source:  
+        <a href='http://www.gunviolencearchive.org/' target='_blank'>Gun Violence Archive</a>
+        <!-- INPUT: additional notes for the chart -->
+        <br>The Gun Violence Archive defines a mass shooting as an event where four or more are shot and/or killed in a single incident, at the same general time and location  not including the shooter.
+        <!-- INPUT: credit -->
+        <div id="credit">Sophie Chou / PRI</div>
+    </div>
+</div>
+</body>
+
+<script>
+$(function () {
+    var chart;
+    $(document).ready(function() {
+
+        Highcharts.setOptions({
+            lang: {
+              thousandsSep: ','
+            }
+        }),
+
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'column',
+            },
+            title: {
+                text: null,
+            },
+            subtitle: {
+                enabled: false,
+            },
+
+            //the unit of xAxis is time-based. If your xAxis unit is not time or date, use the line-category template.
+            xAxis: {
+                type: 'datetime',
+            //how the time/date unit should be displayed on xAxis, check Highcharts API for other options (http://api.highcharts.com/highcharts/xAxis.dateTimeLabelFormats)    
+                dateTimeLabelFormats: {
+                    year: '%Y'
+                },
+            //set the interval between units displayed on xAxis (the current setting is for 5 years), remove this line if you want Highcharts to decide for you.        
+                //tickInterval: 24 * 3600 * 1000 * 365 * 5,
+                showLastLabel: false,          
+            },
+            yAxis: {
+            //INPUT: the unit of yAxis    
+                title: {
+                  text: 'Deaths',
+                  style: {
+                    color: '#808080',
+                    fontSize: '11px',
+                  },  
+                },
+                endOnTick: false,
+            },
+            credits: {enabled: false},
+            //Disable the legend if there's only one series of data
+            legend: {
+                enabled: false,
+            },
+            //Customize the default tooltip. Refer to the syntax at Highcharts API (http://api.highcharts.com/highcharts/tooltip.headerFormat, http://api.highcharts.com/highcharts/tooltip.pointFormat). You can also write a function to populate the tooltip by using the "formatter" function.
+            tooltip: {
+                xDateFormat: '%b. %d, %Y',
+            },
+            plotOptions: {
+                series: { 
+                     pointWidth: 2,
+                     groupPadding: 0.2,
+                    // pointPadding: 0.1,
+                    // stickyTracking: false,
+                    //MODIFY: Show/hide label on the data points. Default is hide.
+                    dataLabels: {
+                        enabled: false,
+                        //y:15,
+
+                        style: {
+                            fontSize: '11px',
+                            color: '#33333c',  
+                        },
+                        //MODIFY: Customize the data label. "point.y" is the data value. ",.0f" sets "," as thousand separator and sets the decimal point at zero. Refer to the syntax at Highcharts API under the topic "FORMAT STRINGS" (http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting). Remove this line for Highcharts to auto-populate the label.
+                        format: '{point.text}',
+                    },
+                },
+                //MODIFY: Show/hide the data point marker.
+                line: {
+                    marker: {
+                        enabled: false
+                    }
+                },
+            },    
+            //INPUT: Your data points should be in an array. Color applies to all data points. 'Name' refers to the series name which will appear in the default tooltip. If you want to change the color of a particular data point, replace that data value with an object like '{y:1185, color:"#FF7F00"}', or see the chart "iraq-married-401".
+            series: [ 
+                {name: "Fatalities", color:"#377EB8", 
+                 
+                //WTF JAVASCRIPT MONTHS ARE FROM 00 TO 11????
+                data :[ 
+                    [Date.UTC(2017,00,01),1],
+                    [Date.UTC(2017,00,03),0],
+                    [Date.UTC(2017,00,04),3],
+                    [Date.UTC(2017,00,06),7],
+                    [Date.UTC(2017,00,07),1],
+                    [Date.UTC(2017,00,11),2],
+                    [Date.UTC(2017,00,12),5],
+                    [Date.UTC(2017,00,15),4],
+                    [Date.UTC(2017,00,16),0],
+                    [Date.UTC(2017,00,20),1],
+                    [Date.UTC(2017,00,21),2],
+                    [Date.UTC(2017,00,22),6],
+                    [Date.UTC(2017,00,25),0],
+                    [Date.UTC(2017,00,26),2],
+                    [Date.UTC(2017,00,27),0],
+                    [Date.UTC(2017,00,29),1],
+                    [Date.UTC(2017,00,30),0],
+                    [Date.UTC(2017,00,31),0],
+                    [Date.UTC(2017,01,06),4],
+                    [Date.UTC(2017,01,07),1],
+                    [Date.UTC(2017,01,08),1],
+                    [Date.UTC(2017,01,09),4],
+                    [Date.UTC(2017,01,10),1],
+                    [Date.UTC(2017,01,11),1],
+                    [Date.UTC(2017,01,12),2],
+                    [Date.UTC(2017,01,15),3],
+                    [Date.UTC(2017,01,18),1],
+                    [Date.UTC(2017,01,19),1],
+                    [Date.UTC(2017,01,20),0],
+                    [Date.UTC(2017,01,21),4],
+                    [Date.UTC(2017,01,22),0],
+                    [Date.UTC(2017,01,25),3],
+                    [Date.UTC(2017,01,26),1],
+                    [Date.UTC(2017,01,27),0],
+                    [Date.UTC(2017,01,28),0],
+                    [Date.UTC(2017,02,03),0],
+                    [Date.UTC(2017,02,04),1],
+                    [Date.UTC(2017,02,05),0],
+                    [Date.UTC(2017,02,07),0],
+                    [Date.UTC(2017,02,10),5],
+                    [Date.UTC(2017,02,15),3],
+                    [Date.UTC(2017,02,18),3],
+                    [Date.UTC(2017,02,19),1],
+                    [Date.UTC(2017,02,22),5],
+                    [Date.UTC(2017,02,24),2],
+                    [Date.UTC(2017,02,25),4],
+                    [Date.UTC(2017,02,26),6],
+                    [Date.UTC(2017,02,27),2],
+                    [Date.UTC(2017,02,30),4],
+                    [Date.UTC(2017,03,01),3],
+                    [Date.UTC(2017,03,02),2],
+                    [Date.UTC(2017,03,03),3],
+                    [Date.UTC(2017,03,06),1],
+                    [Date.UTC(2017,03,07),13],
+                    [Date.UTC(2017,03,09),2],
+                    [Date.UTC(2017,03,13),1],
+                    [Date.UTC(2017,03,15),0],
+                    [Date.UTC(2017,03,16),0],
+                    [Date.UTC(2017,03,20),0],
+                    [Date.UTC(2017,03,21),2],
+                    [Date.UTC(2017,03,26),0],
+                    [Date.UTC(2017,03,27),1],
+                    [Date.UTC(2017,03,28),0],
+                    [Date.UTC(2017,03,29),3],
+                    [Date.UTC(2017,03,30),7],
+                    [Date.UTC(2017,04,01),2],
+                    [Date.UTC(2017,04,02),1],
+                    [Date.UTC(2017,04,04),1],
+                    [Date.UTC(2017,04,07),2],
+                    [Date.UTC(2017,04,09),3],
+                    [Date.UTC(2017,04,10),1],
+                    [Date.UTC(2017,04,14),1],
+                    [Date.UTC(2017,04,16),3],
+                    [Date.UTC(2017,04,20),0],
+                    [Date.UTC(2017,04,21),1],
+                    [Date.UTC(2017,04,26),0],
+                    [Date.UTC(2017,04,27),9],
+                    [Date.UTC(2017,04,28),1],
+                    [Date.UTC(2017,04,29),1],
+                    [Date.UTC(2017,04,30),1],
+                    [Date.UTC(2017,05,01),3],
+                    [Date.UTC(2017,05,02),3],
+                    [Date.UTC(2017,05,03),5],
+                    [Date.UTC(2017,05,05),6],
+                    [Date.UTC(2017,05,06),3],
+                    [Date.UTC(2017,05,08),0],
+                    [Date.UTC(2017,05,09),2],
+                    [Date.UTC(2017,05,10),0],
+                    [Date.UTC(2017,05,11),0],
+                    [Date.UTC(2017,05,13),2],
+                    [Date.UTC(2017,05,14),5],
+                    [Date.UTC(2017,05,15),6],
+                    [Date.UTC(2017,05,17),1],
+                    [Date.UTC(2017,05,18),3],
+                    [Date.UTC(2017,05,22),1],
+                    [Date.UTC(2017,05,24),1],
+                    [Date.UTC(2017,05,25),1],
+                    [Date.UTC(2017,05,27),0],
+                    [Date.UTC(2017,05,30),2],
+                    [Date.UTC(2017,06,01),2],
+                    [Date.UTC(2017,06,02),0],
+                    [Date.UTC(2017,06,03),4],
+                    [Date.UTC(2017,06,04),2],
+                    [Date.UTC(2017,06,05),6],
+                    [Date.UTC(2017,06,06),0],
+                    [Date.UTC(2017,06,08),1],
+                    [Date.UTC(2017,06,09),0],
+                    [Date.UTC(2017,06,15),1],
+                    [Date.UTC(2017,06,18),1],
+                    [Date.UTC(2017,06,19),1],
+                    [Date.UTC(2017,06,22),0],
+                    [Date.UTC(2017,06,23),1],
+                    [Date.UTC(2017,06,26),1],
+                    [Date.UTC(2017,06,27),1],
+                    [Date.UTC(2017,06,28),0],
+                    [Date.UTC(2017,06,29),3],
+                    [Date.UTC(2017,06,30),2],
+                    [Date.UTC(2017,06,31),0],
+                    [Date.UTC(2017,07,01),0],
+                    [Date.UTC(2017,07,02),0],
+                    [Date.UTC(2017,07,03),1],
+                    [Date.UTC(2017,07,04),3],
+                    [Date.UTC(2017,07,05),2],
+                    [Date.UTC(2017,07,06),0],
+                    [Date.UTC(2017,07,08),1],
+                    [Date.UTC(2017,07,12),1],
+                    [Date.UTC(2017,07,13),0],
+                    [Date.UTC(2017,07,14),2],
+                    [Date.UTC(2017,07,16),0],
+                    [Date.UTC(2017,07,19),1],
+                    [Date.UTC(2017,07,20),2],
+                    [Date.UTC(2017,07,21),6],
+                    [Date.UTC(2017,07,22),0],
+                    [Date.UTC(2017,07,24),4],
+                    [Date.UTC(2017,07,25),0],
+                    [Date.UTC(2017,07,27),2],
+                    [Date.UTC(2017,07,28),2],
+                    [Date.UTC(2017,08,02),1],
+                    [Date.UTC(2017,08,03),2],
+                    [Date.UTC(2017,08,04),0],
+                    [Date.UTC(2017,08,06),0],
+                    [Date.UTC(2017,08,09),0],
+                    [Date.UTC(2017,08,10),10],
+                    [Date.UTC(2017,08,13),2],
+                    [Date.UTC(2017,08,16),0],
+                    [Date.UTC(2017,08,17),2],
+                    [Date.UTC(2017,08,20),0],
+                    [Date.UTC(2017,08,23),3],
+                    [Date.UTC(2017,08,24),2],
+                    [Date.UTC(2017,08,26),3],
+                    [Date.UTC(2017,08,28),1],
+                    [Date.UTC(2017,08,30),1],
+                    {x: Date.UTC(2017,09,01), y:62, text:"Las Vegas", dataLabels: {enabled:true}},
+                    [Date.UTC(2017,09,03),0],
+                    [Date.UTC(2017,09,05),4],
+                    [Date.UTC(2017,09,06),0],
+                    [Date.UTC(2017,09,07),0],
+                    [Date.UTC(2017,09,09),0],
+                    [Date.UTC(2017,09,10),0],
+                    [Date.UTC(2017,09,11),4],
+                    [Date.UTC(2017,09,12),2],
+                    [Date.UTC(2017,09,15),3],
+                    [Date.UTC(2017,09,16),1],
+                    [Date.UTC(2017,09,17),0],
+                    [Date.UTC(2017,09,18),3],
+                    [Date.UTC(2017,09,21),0],
+                    [Date.UTC(2017,09,22),2],
+                    [Date.UTC(2017,09,23),2],
+                    [Date.UTC(2017,09,27),0],
+                    [Date.UTC(2017,09,28),1],
+                    [Date.UTC(2017,09,29),1],
+                    [Date.UTC(2017,09,31),1],
+                    [Date.UTC(2017,10,03),1],
+                    [Date.UTC(2017,10,04),1],
+                    {x: Date.UTC(2017,10,05), y:27, text:"Sutherland Springs",dataLabels: {enabled:true}},
+                    [Date.UTC(2017,10,09),0],
+                    [Date.UTC(2017,10,10),0],
+                    [Date.UTC(2017,10,11),3],
+                    [Date.UTC(2017,10,12),2],
+                    [Date.UTC(2017,10,14),5]
+                ]},
+            ],
+        });
+    });
+
+});
+</script>
