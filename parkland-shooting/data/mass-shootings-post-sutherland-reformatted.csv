@@ -1,0 +1,69 @@
+date,state,city_county,address,nkill,ninjured,operations
+11/05/17,Texas,Sutherland Springs,216 4th St,27,20,N/A
+11/09/17,Pennsylvania,Philadelphia,1800 block of Ringgold,0,4,N/A
+11/10/17,Ohio,Dayton (Trotwood),193 Olive Rd,0,4,N/A
+11/11/17,Texas,Dallas,2532 Martin Luther King Jr Blvd,1,3,N/A
+11/11/17,Louisiana,New Orleans,Forstall Street and Burgundy Street,1,5,N/A
+11/11/17,North Carolina,Fayetteville,2835 Bragg Blvd,1,5,N/A
+11/12/17,Indiana,Gary,4601 Melton Rd,0,7,N/A
+11/12/17,California,Fresno,S Calvin Ave,0,5,N/A
+11/12/17,Georgia,Atlanta,50 Lower Alabama St,2,2,N/A
+11/14/17,California,Corning,17357 Stagecoach Rd,6,12,N/A
+11/14/17,California,Richmond,900 Block of View Dr,2,2,N/A
+11/16/17,Georgia,Columbus,1400 block of 15th Street,0,7,N/A
+11/17/17,Louisiana,New Iberia,900 Block of Mississippi St,0,4,N/A
+11/18/17,Minnesota,Minneapolis,3600 block of Emerson Avenue North,0,4,N/A
+11/24/17,Ohio,Cleveland,11618 Buckeye Rd,1,5,N/A
+11/24/17,Mississippi,Brookhaven,119 Martin Street,1,6,N/A
+11/30/17,Michigan,Detroit,11000 block of Gunston,1,4,N/A
+12/02/17,Michigan,Detroit,5200 Woodward Avenue,0,4,N/A
+12/03/17,Tennessee,Memphis,656 Marshall Ave,1,3,N/A
+12/04/17,Pennsylvania,Pittsburgh,7200 block of Everton St,2,2,N/A
+12/06/17,Illinois,Chicago,4620 N Broadway,0,4,N/A
+12/09/17,Massachusetts,Boston,Proctor St,0,4,N/A
+12/12/17,Kentucky,Louisville,17th and Gallagher Streets,0,4,N/A
+12/12/17,Texas,Garland,1301 Rivercrest Ln,0,4,N/A
+12/13/17,Ohio,Columbus,200 block of E Barthman Ave,1,3,N/A
+12/15/17,California,Pacoima,13041 Jouett Street,0,5,N/A
+12/16/17,Mississippi,Mc Cool (Mccool),Ferguson Rd,0,4,N/A
+12/21/17,Louisiana,Lafayette,1500 block of N University Avenue,0,4,N/A
+12/21/17,Pennsylvania,Philadelphia,6600 block of Dorel St,1,3,N/A
+12/23/17,Louisiana,Eunice,100 block of City Avenue,1,3,N/A
+12/23/17,Alabama,Birmingham,3rd Ave N and 9th St N,0,4,N/A
+12/24/17,Mississippi,Vicksburg,1111 Mulberry Street,0,5,N/A
+12/24/17,Alabama,Troy,100 block of Chapman St,1,4,N/A
+12/26/17,Florida,Miami,NW 18th Ave and 86th Ter,0,5,N/A
+12/27/17,Nevada,Las Vegas,3750 E Bonanza Rd,2,2,N/A
+12/31/17,Colorado,Littleton (Highlands Ranch),3404 E County Line Rd,2,6,N/A
+12/31/17,Illinois,Chicago,2335 Howard St,0,4,N/A
+12/31/17,New Jersey,Long Branch,635 Wall St,4,0,N/A
+01/01/18,Alabama,Huntsville,2025 Sparkman Dr NW,1,3,N/A
+01/04/18,Arkansas,Brinkley,615 W 6th St,1,3,N/A
+01/05/18,Mississippi,Hattiesburg,6168 US 49,0,6,N/A
+01/07/18,Alabama,Union Springs,U.S. Highway 29,1,5,N/A
+01/07/18,Florida,Plantation,5225 W Broward Blvd,0,4,N/A
+01/11/18,Missouri,Saint Robert (St Robert),St Robert Outer Road and Houston Road,2,2,N/A
+01/12/18,Tennessee,Nashville,2614 Jenkins Ct,3,2,N/A
+01/14/18,Alabama,Eutaw,809 Mesopotamia St,1,4,N/A
+01/14/18,Alabama,Madison,101 Westchester Dr,0,4,N/A
+01/15/18,Florida,Alachua,14223 NW 156th Pl,0,5,N/A
+01/16/18,South Carolina,York,3042 Farrier Lane,1,4,N/A
+01/17/18,District of Columbia,Washington,2000 block of 16th St SE,1,3,N/A
+01/21/18,Florida,Orlando,3101 Willow Bend Blvd,0,4,N/A
+01/21/18,Illinois,Chicago,3200 W Division St,0,4,N/A
+01/23/18,Pennsylvania,Philadelphia,N 24th St and Ridge Ave,0,4,N/A
+01/23/18,Kentucky,Benton,416 High School Road,2,14,N/A
+01/25/18,District of Columbia,Washington,1600 block of Kenilworth Ave NE,0,4,N/A
+01/27/18,California,Los Angeles,243 East 119th St,0,5,N/A
+01/27/18,Kentucky,Bowling Green,645 Pearl Street,0,4,N/A
+01/28/18,Pennsylvania,Melcroft,1301 Indian Creek Valley Rd,5,0,N/A
+01/28/18,Pennsylvania,Reading,123 S 3rd St,4,0,N/A
+01/28/18,Indiana,Indianapolis,1313 N Sherman Dr,2,3,N/A
+01/31/18,Missouri,Saint Louis,Goodfellow Blvd and Dr Martin Luther King Dr,0,4,N/A
+02/03/18,Ohio,Cleveland (Garfield Heights),11321 Broadway Ave,1,5,N/A
+02/05/18,Colorado,Colorado Springs,4225 Galley Rd,2,4,N/A
+02/07/18,Florida,Lake Worth (Lantana),I-95 and Lantana Ave,3,3,N/A
+02/10/18,Kentucky,Paintsville,413 Mill Street,5,0,N/A
+02/11/18,Michigan,Detroit,19432 Lamont Street,4,3,N/A
+02/13/18,Louisiana,New Orleans,5400 block of Andry Street,2,3,N/A
+02/14/18,Florida,Pompano Beach (Parkland),5901 Pine Island Rd,17,15,N/A
